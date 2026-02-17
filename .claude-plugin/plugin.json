@@ -1,0 +1,8 @@
+{
+  "name": "saas-grader",
+  "description": "Analyzes SaaS websites against 47 research-backed optimization rules drawn from peer-reviewed marketing science. Scores 8 categories — brand messaging, page design, pricing, free trials, freemium, churn prevention, affiliates, and referrals — with full academic citations. Includes 2 commands: analyze (comprehensive .md export) and report (PDF summary).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Local"
+  }
+}
