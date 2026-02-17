@@ -396,7 +396,7 @@
 
 **What it is:** The referral program encourages users to refer people who are likely to be a good fit, not just anyone.
 
-**Recommendation:** Encourage people to only refer friends who are likely to buy your product. For example, remind who it's for (e.g. "Recommend Science Says to other science-based marketers" or "Invite other bookworms to Goodreads"). If they recommend it to someone who won't follow the recommendation (e.g. because the product is not a good fit for them), the referrer will be up to 26% more likely to churn in the future.
+**Recommendation:** Encourage people to only refer friends who are likely to buy your product. For example, remind who it's for (e.g. "Recommend [Product] to other [target users]" or "Invite other bookworms to Goodreads"). If they recommend it to someone who won't follow the recommendation (e.g. because the product is not a good fit for them), the referrer will be up to 26% more likely to churn in the future.
 
 **Why it matters:** People offer recommendations because they think their opinions are sound. When the recommendation is rejected, people's confidence in knowing the best products suffers and they may switch to alternative options to "regain expertise."
 

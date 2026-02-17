@@ -2,7 +2,7 @@
 
 A Claude Code plugin that analyzes SaaS websites against 47 research-backed optimization rules. Every rule cites the peer-reviewed research behind it — no opinions, no fluff.
 
-Based on "The Science-based Playbook of SaaS Optimization" by Thomas McKinlay (Science Says / ScienceSays.com), supplemented with Nielsen Norman Group eyetracking research.
+Rules drawn from peer-reviewed marketing science and UX research, supplemented with Nielsen Norman Group eyetracking studies.
 
 ## Installation
 

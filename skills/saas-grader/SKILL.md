@@ -2,7 +2,7 @@
 
 A research-backed analysis tool that scores SaaS websites against 47 optimization rules drawn from peer-reviewed marketing science and UX research. Every rule includes the full research citation — no opinions, no fluff.
 
-Based on "The Science-based Playbook of SaaS Optimization" by Thomas McKinlay (Science Says / ScienceSays.com), supplemented with Nielsen Norman Group eyetracking research.
+Rules drawn from peer-reviewed marketing science and UX research, supplemented with Nielsen Norman Group eyetracking studies.
 
 ## Purpose
 
