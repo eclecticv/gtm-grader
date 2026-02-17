@@ -1,8 +1,8 @@
 # SaaS Grader
 
-A Claude Code plugin that analyzes SaaS websites against 47 research-backed optimization rules. Every rule cites the peer-reviewed research behind it — no opinions, no fluff.
+Score any SaaS website against 47 optimization rules drawn from published research in the *Journal of Marketing*, *Journal of Consumer Research*, *Marketing Science*, *Management Science*, and 10+ other peer-reviewed journals — conducted at UCLA, Stanford, MIT Sloan, University of Melbourne, NUS, Georgetown, and Nielsen Norman Group, among others.
 
-Rules drawn from peer-reviewed marketing science and UX research, supplemented with Nielsen Norman Group eyetracking studies.
+Every rule includes the full citation. No opinions, no best-practice hand-waving — just the science and a PASS/FAIL verdict.
 
 ## Installation
 
@@ -52,17 +52,6 @@ Runs the same analysis and generates a polished PDF summary report.
 | 6 | Churn Prevention | CP-1 to CP-3 | Customer gifts, auto-enrolling loyalty, generous downgrades |
 | 7 | Affiliates | AF-1 to AF-2 | Optimize affiliate payment model, protect from deceptive affiliates |
 | 8 | Referrals | RF-1 to RF-5 | Altruistic framing, pre-filled messages, avoid money rewards, keep rewards small, targeted referrals |
-
-## Research Sources
-
-All rules are drawn from peer-reviewed research published in journals including:
-- Journal of Marketing, Journal of Marketing Research, Journal of Consumer Research
-- Marketing Science, Management Science
-- Journal of Business Research, International Journal of Research in Marketing
-- Journal of Consumer Psychology, Journal of Service Research
-- Information Systems Research, International Journal of Advertising
-
-Research conducted at institutions including UCLA, Stanford, MIT Sloan, University of Melbourne, National University of Singapore, University of Washington, Georgetown University, Nielsen Norman Group, and many others.
 
 ## Requirements
 
