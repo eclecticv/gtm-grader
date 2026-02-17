@@ -20,10 +20,10 @@ Or add to your Claude Code settings for persistent loading.
 Analyzes a SaaS website against all 47 rules and exports a comprehensive markdown report.
 
 ```
-/saas-grader:analyze https://linear.app
+/saas-grader:analyze https://example.com
 ```
 
-**Output:** A standalone `.md` file (`linear-saas-analysis.md`) covering every rule with:
+**Output:** A standalone `.md` file (`example-saas-analysis.md`) covering every rule with:
 - What the rule is and why it matters (from research)
 - Full academic citation (authors, journal, universities)
 - PASS/FAIL/N/A compliance verdict
@@ -35,7 +35,7 @@ Analyzes a SaaS website against all 47 rules and exports a comprehensive markdow
 Runs the same analysis and generates a polished PDF summary report.
 
 ```
-/saas-grader:report https://linear.app
+/saas-grader:report https://example.com
 ```
 
 **Output:** A designed A4 PDF saved to your current directory.

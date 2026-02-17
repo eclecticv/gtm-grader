@@ -34,8 +34,8 @@ Generate a polished PDF report from a SaaS optimization analysis.
 ## Template Placeholder Reference
 
 ### Header
-- `{{COMPANY_NAME}}` — Company name (e.g., "Linear")
-- `{{URL}}` — Full URL analyzed (e.g., "https://linear.app")
+- `{{COMPANY_NAME}}` — Company name (e.g., "Acme")
+- `{{URL}}` — Full URL analyzed (e.g., "https://example.com")
 - `{{DATE}}` — Report date (e.g., "February 17, 2026")
 
 ### Grade Cards (repeat for BM, PD, PR, FT, FM, CP, AF, RF)
@@ -89,7 +89,7 @@ For a category with X passing out of Y total:
 ## Notes
 
 - The PDF will be saved to the user's current working directory
-- File name format: `[company-name-lowercase]-saas-report.pdf` (e.g., `linear-saas-report.pdf`)
+- File name format: `[company-name-lowercase]-saas-report.pdf` (e.g., `acme-saas-report.pdf`)
 - If browser MCP's `page.pdf()` is not available, save the populated HTML file instead and tell the user they can print it to PDF from their browser
 - The report is a visual summary — for the full per-rule analysis, use `/analyze` to get the comprehensive `.md` export
 - Always include the brief terminal summary as well (same as /analyze), then mention the PDF location
