@@ -58,7 +58,7 @@
 
 **Key stat:** Present tense descriptions are perceived as more universal and trustworthy.
 
-**Source:** Derived from language framing principles in the productization research context. **Universities:** National University of Singapore.
+**Source:** Practitioner consensus. Present-tense framing is a widely adopted copywriting principle supported by general findings in linguistic concreteness research, but no single peer-reviewed paper isolates verb tense as an independent variable in SaaS conversion contexts.
 
 **PASS criteria:**
 - Descriptions use present tense ("Teams love our platform")
@@ -80,7 +80,7 @@
 
 **Key stat:** New brands are preferred for innovative/high-tech products.
 
-**Source:** Derived from brand perception research. **Universities:** National University of Singapore.
+**Source:** Practitioner consensus. The preference for new brands in innovative/high-tech categories is a widely observed market pattern supported by general brand perception research, but no single peer-reviewed paper isolates brand age as an independent variable in SaaS purchase contexts.
 
 **PASS criteria:**
 - New brands (<5 years) showcase recency ("Established in 2024", "Launched in 2023")
@@ -105,7 +105,7 @@
 
 **Key stat:** Technical language reduces trust and purchase intent.
 
-**Source:** Derived from processing fluency research in marketing communication. **Universities:** Multiple institutions (general finding in consumer psychology).
+**Source:** Oppenheimer, D. M. Consequences of Erudite Vernacular Utilized Irrespective of Necessity: Problems with Using Long Words Needlessly. *Applied Cognitive Psychology* (March 2006). **Universities:** Princeton University.
 
 **PASS criteria:**
 - Product descriptions use plain, everyday language

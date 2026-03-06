@@ -1,19 +1,22 @@
-# Command: analyze
+# Command: grade
 
 Analyze a SaaS website against 47 research-backed optimization rules and export a comprehensive markdown report covering every single rule.
 
 ## Usage
 ```
-/saas-grader:analyze <url>
+/gtm-grader:grade <url>
 ```
 
 ## What It Does
 
 1. **Crawl the homepage** via WebFetch to extract text content
 2. **Find the pricing page** — look for pricing/plans links in the navigation or page content. If found, crawl it too via WebFetch
-3. **Screenshot both pages** via the browser MCP:
-   - Navigate to the homepage URL, take a full-page screenshot
-   - If a pricing page was found, navigate there and take a full-page screenshot
+3. **Screenshot both pages** using local headless Chrome (NOT the browser MCP, which runs in Docker and may not be available):
+   - First, find the Chrome binary: `which google-chrome-stable 2>/dev/null || which google-chrome 2>/dev/null || which chromium 2>/dev/null || ls "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" 2>/dev/null`
+   - Screenshot the homepage: `"/path/to/chrome" --headless --disable-gpu --no-sandbox --screenshot="[company]-homepage.png" --window-size=1280,4000 "[url]"`
+   - If a pricing page was found, screenshot it too: `"/path/to/chrome" --headless --disable-gpu --no-sandbox --screenshot="[company]-pricing.png" --window-size=1280,4000 "[pricing-url]"`
+   - Read the screenshot files using the Read tool to visually inspect them
+   - Delete the screenshot files after inspection
 4. **Read all 4 reference files** to get the full checklist:
    - `skills/saas-grader/reference/brand-messaging.md` (BM-1 to BM-8)
    - `skills/saas-grader/reference/page-design.md` (PD-1 to PD-14)
@@ -146,7 +149,7 @@ The file must follow this EXACT structure:
 After writing the `.md` file, output a brief terminal summary:
 
 ```
-ANALYSIS COMPLETE: [Company Name]
+GRADE COMPLETE: [Company Name]
 File: [filename].md ([total rules] rules evaluated)
 
   Brand & Messaging     [grade]  (X/Y)
@@ -165,7 +168,8 @@ Open [filename].md for the full analysis.
 
 ## Notes
 
-- If the browser MCP is unavailable, proceed with text-only analysis and note that visual checks (PD items) may be less accurate
+- **IMPORTANT: Do NOT use the browser MCP for screenshots.** Always use local headless Chrome via the Bash tool instead. The browser MCP runs in Docker and creates unnecessary complexity.
+- If Chrome is not installed, proceed with text-only analysis and note that visual checks (PD items) may be less accurate
 - If no pricing page is found, note it and score pricing items as N/A where they require pricing page content
 - The `.md` file is the primary output — it should be a complete, standalone document that can be shared with a team
 - University names only in citations — no individual researcher names in the terminal summary

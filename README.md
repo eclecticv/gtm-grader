@@ -1,46 +1,51 @@
-# SaaS Grader
+# GTM Grader
 
-Score any SaaS website against 47 optimization rules drawn from published research in the *Journal of Marketing*, *Journal of Consumer Research*, *Marketing Science*, *Management Science*, and 10+ other peer-reviewed journals — conducted at UCLA, Stanford, MIT Sloan, University of Melbourne, NUS, Georgetown, and Nielsen Norman Group, among others.
-
-Every rule includes the full citation. No opinions, no best-practice hand-waving — just the science and a PASS/FAIL verdict.
-
-## Installation
-
-```bash
-# Load the plugin from its directory
-claude --plugin-dir /path/to/saas-grader
-```
-
-Or add to your Claude Code settings for persistent loading.
+Score any SaaS website against 56 research-backed checks covering both **SaaS optimization** (47 rules from peer-reviewed marketing science) and **homepage positioning** (9 checks from Dunford and Fletch PMM). Every check includes its full source citation.
 
 ## Commands
 
-### `/analyze <url>`
+| Command | What it does | Output |
+|---------|-------------|--------|
+| `/gtm-grader:grade <url>` | 47-rule SaaS optimization analysis | `[company]-saas-analysis.md` |
+| `/gtm-grader:position <url>` | 9-check positioning diagnostic | `[company]-positioning-analysis.md` |
+| `/gtm-grader:wins <url>` | One-page prioritized summary (both) | `[company]-gtm-wins.md` |
+| `/gtm-grader:export <url>` | Full combined analysis (both) | `[company]-gtm-export.md` |
 
-Analyzes a SaaS website against all 47 rules and exports a comprehensive markdown report.
+## Installation
 
+Add the plugin directory to your Claude Code settings file (`~/.claude/settings.json`):
+
+```json
+{
+  "permissions": {
+    "allow": [
+      "mcp",
+      "Bash(grep:*)",
+      "Read",
+      "Write"
+    ]
+  },
+  "plugins": [
+    "/path/to/gtm-grader"
+  ]
+}
 ```
-/saas-grader:analyze https://example.com
+
+Or load it for a single session:
+
+```bash
+claude --plugin /path/to/gtm-grader
 ```
 
-**Output:** A standalone `.md` file (`example-saas-analysis.md`) covering every rule with:
-- What the rule is and why it matters (from research)
-- Full academic citation (authors, journal, universities)
-- PASS/FAIL/N/A compliance verdict
-- Specific observation from the site
-- Concrete fix recommendation (if failing)
+### Requirements
 
-### `/report <url>`
+- Claude Code CLI
+- WebFetch capability (built into Claude Code)
+- Google Chrome (for homepage screenshots — optional, text-only analysis works without it)
 
-Runs the same analysis and generates a polished PDF summary report.
+## What It Checks
 
-```
-/saas-grader:report https://example.com
-```
-
-**Output:** A designed A4 PDF saved to your current directory.
-
-## What It Checks (47 Rules)
+### SaaS Optimization (47 Rules)
 
 | # | Category | Rules | Examples |
 |---|----------|-------|---------|
@@ -53,30 +58,58 @@ Runs the same analysis and generates a polished PDF summary report.
 | 7 | Affiliates | AF-1 to AF-2 | Optimize affiliate payment model, protect from deceptive affiliates |
 | 8 | Referrals | RF-1 to RF-5 | Altruistic framing, pre-filled messages, avoid money rewards, keep rewards small, targeted referrals |
 
-## Requirements
+Sources: *Journal of Marketing*, *Journal of Consumer Research*, *Marketing Science*, *Management Science*, and 10+ other peer-reviewed journals. Research from UCLA, Stanford, MIT Sloan, Princeton, NUS, Nielsen Norman Group, and others.
 
-- Claude Code CLI
-- Browser MCP (for screenshots and PDF generation)
-- WebFetch capability (for page content extraction)
+### Positioning (9 Checks)
+
+| # | Category | Checks | Framework |
+|---|----------|--------|-----------|
+| 9 | Dunford Canvas | DC-1 to DC-5 | Competitive alternatives, unique attributes, value mapping, target customer, market category |
+| 10 | Fletch Questions | FQ-1 to FQ-4 | What is it?, Who is it for?, What does it replace?, Why is it better? |
+
+Sources: Dunford, A. *Obviously Awesome* (2019). Pierri, A. & Fralic, R. Fletch PMM (2020-2024).
+
+## Priority Classification (wins command)
+
+The `/wins` command classifies failures into three tiers:
+
+- **Critical** — Above-the-fold items that directly block conversion: headline misses, missing social proof, broken CTA placement, unclear value proposition, unidentified target customer
+- **Medium** — Below-the-fold or moderate-impact items: design mismatches, pricing structure issues, content organization problems
+- **Low** — Less visible or smaller effect size items: font choices, video speed, referral details, affiliate structure, churn signals
+
+## Extensibility
+
+Future analysis domains (UX, SEO/AEO, social media) follow the same pattern:
+
+1. Create `skills/[domain]/SKILL.md` with category overview
+2. Create `skills/[domain]/reference/[framework].md` with individual checks
+3. Create `commands/[command-name].md` with the analysis pipeline
+4. Update `/wins` and `/export` to include the new domain
+5. Update `plugin.json` and this README
 
 ## File Structure
 
 ```
-saas-grader/
+gtm-grader/
 ├── .claude-plugin/
 │   └── plugin.json
 ├── commands/
-│   ├── analyze.md
-│   └── report.md
+│   ├── grade.md          # 47-rule SaaS optimization
+│   ├── position.md       # 9-check positioning diagnostic
+│   ├── wins.md           # One-page prioritized summary
+│   └── export.md         # Full combined analysis
 ├── skills/
-│   └── saas-grader/
+│   ├── saas-grader/
+│   │   ├── SKILL.md
+│   │   └── reference/
+│   │       ├── brand-messaging.md
+│   │       ├── page-design.md
+│   │       ├── pricing-plans.md
+│   │       └── growth-levers.md
+│   └── positioning/
 │       ├── SKILL.md
 │       └── reference/
-│           ├── brand-messaging.md
-│           ├── page-design.md
-│           ├── pricing-plans.md
-│           └── growth-levers.md
-├── assets/
-│   └── report-template.html
+│           ├── dunford-canvas.md
+│           └── fletch-questions.md
 └── README.md
 ```

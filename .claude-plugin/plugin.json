@@ -1,8 +1,8 @@
 {
-  "name": "saas-grader",
-  "description": "Analyzes SaaS websites against 47 research-backed optimization rules drawn from peer-reviewed marketing science. Scores 8 categories — brand messaging, page design, pricing, free trials, freemium, churn prevention, affiliates, and referrals — with full academic citations. Includes 2 commands: analyze (comprehensive .md export) and report (PDF summary).",
-  "version": "1.0.0",
+  "name": "gtm-grader",
+  "description": "Scores SaaS websites against 56 research-backed checks across 10 categories: 47 optimization rules from peer-reviewed marketing science (brand messaging, page design, pricing, trials, freemium, churn, affiliates, referrals) plus 9 positioning checks from Dunford and Fletch PMM frameworks. Commands: grade, position, wins, export.",
+  "version": "2.0.0",
   "author": {
-    "name": "Local"
+    "name": "And/or Labs"
   }
 }

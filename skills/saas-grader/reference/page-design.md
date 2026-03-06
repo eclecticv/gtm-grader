@@ -132,7 +132,7 @@
 
 **Key stat:** Font style significantly impacts perceived brand precision and reliability.
 
-**Source:** Biswas, D., Abell, A., & Chacko, R. Curvy Digital Marketing Designs: Virtual Elements with Rounded Shapes Enhance Online Click-Through Rates. *Journal of Consumer Research* (December 2023). **Universities:** University of South Florida.
+**Source:** Practitioner consensus. The association between machine-written typefaces and perceived precision/reliability is well-established in branding practice and supported by typeface congruity research. The Biswas et al. (2023) paper originally cited here studied rounded button shapes (PD-5), not font choices.
 
 **PASS criteria:**
 - Clean sans-serif or serif machine font for body and headings
