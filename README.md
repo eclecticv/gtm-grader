@@ -1,6 +1,6 @@
 # GTM Grader
 
-Score any SaaS website against 56 research-backed checks covering both **SaaS optimization** (47 rules from peer-reviewed marketing science) and **homepage positioning** (9 checks from Dunford and Fletch PMM). Every check includes its full source citation.
+Score any SaaS website against 77 research-backed checks covering **SaaS optimization** (47 rules from peer-reviewed marketing science), **homepage positioning** (9 checks from Dunford and Fletch PMM), and **search discoverability** (21 checks from Google documentation, SEO research, and content marketing studies). Every check includes its full source citation.
 
 ## Commands
 
@@ -8,6 +8,7 @@ Score any SaaS website against 56 research-backed checks covering both **SaaS op
 |---------|-------------|--------|
 | `/gtm-grader:grade <url>` | 47-rule SaaS optimization analysis | `[company]-saas-analysis.md` |
 | `/gtm-grader:position <url>` | 9-check positioning diagnostic | `[company]-positioning-analysis.md` |
+| `/gtm-grader:search <url>` | 21-check search gap analysis + competitive landscape + content pillars | `[company]-search-gap.md` |
 | `/gtm-grader:wins <url>` | One-page prioritized summary (both) | `[company]-gtm-wins.md` |
 | `/gtm-grader:export <url>` | Full combined analysis (both) | `[company]-gtm-export.md` |
 
@@ -60,12 +61,24 @@ claude --plugin /path/to/gtm-grader
 
 Sources: *Journal of Marketing*, *Journal of Consumer Research*, *Marketing Science*, *Management Science*, and 10+ other peer-reviewed journals. Research from UCLA, Stanford, MIT Sloan, Princeton, NUS, Nielsen Norman Group, and others.
 
+### Search Discoverability (21 Checks)
+
+| # | Category | Checks | Examples |
+|---|----------|--------|---------|
+| 9 | Technical SEO | TS-1 to TS-8 | Schema.org structured data, meta titles, meta descriptions, heading hierarchy, internal linking, image optimization, canonical tags, OG/Twitter cards |
+| 10 | E-E-A-T Signals | EA-1 to EA-7 | Author attribution, About page depth, original research, external citations, trust signals, case studies, content freshness |
+| 11 | Content Depth | CD-1 to CD-6 | Content depth per page, topic coverage, FAQ content, visual quality, pillar/cluster architecture, funnel balance |
+
+Plus: competitive landscape analysis (top 3 SERP competitors) and scored content pillar recommendations.
+
+Sources: Google Search Central, Google Quality Rater Guidelines, web.dev, Moz, Ahrefs, Backlinko, SEMrush, HubSpot, Content Marketing Institute.
+
 ### Positioning (9 Checks)
 
 | # | Category | Checks | Framework |
 |---|----------|--------|-----------|
-| 9 | Dunford Canvas | DC-1 to DC-5 | Competitive alternatives, unique attributes, value mapping, target customer, market category |
-| 10 | Fletch Questions | FQ-1 to FQ-4 | What is it?, Who is it for?, What does it replace?, Why is it better? |
+| 12 | Dunford Canvas | DC-1 to DC-5 | Competitive alternatives, unique attributes, value mapping, target customer, market category |
+| 13 | Fletch Questions | FQ-1 to FQ-4 | What is it?, Who is it for?, What does it replace?, Why is it better? |
 
 Sources: Dunford, A. *Obviously Awesome* (2019). Pierri, A. & Fralic, R. Fletch PMM (2020-2024).
 
@@ -96,6 +109,7 @@ gtm-grader/
 ├── commands/
 │   ├── grade.md          # 47-rule SaaS optimization
 │   ├── position.md       # 9-check positioning diagnostic
+│   ├── search.md         # 21-check search gap + competitive landscape
 │   ├── wins.md           # One-page prioritized summary
 │   └── export.md         # Full combined analysis
 ├── skills/
@@ -106,10 +120,16 @@ gtm-grader/
 │   │       ├── page-design.md
 │   │       ├── pricing-plans.md
 │   │       └── growth-levers.md
-│   └── positioning/
+│   ├── positioning/
+│   │   ├── SKILL.md
+│   │   └── reference/
+│   │       ├── dunford-canvas.md
+│   │       └── fletch-questions.md
+│   └── search-gap/
 │       ├── SKILL.md
 │       └── reference/
-│           ├── dunford-canvas.md
-│           └── fletch-questions.md
+│           ├── technical-seo.md
+│           ├── eeat-signals.md
+│           └── content-depth.md
 └── README.md
 ```
