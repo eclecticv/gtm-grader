@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "andorlabs",
+  "metadata": {
+    "description": "And/or Labs - AI x GTM tools for B2B SaaS analysis"
+  },
+  "owner": {
+    "name": "And/or Labs",
+    "email": "hello@andorlabs.com"
+  },
+  "plugins": [
+    {
+      "name": "gtm-grader",
+      "description": "Scores SaaS websites against 56 research-backed checks across 10 categories: 47 optimization rules from peer-reviewed marketing science (brand messaging, page design, pricing, trials, freemium, churn, affiliates, referrals) plus 9 positioning checks from Dunford and Fletch PMM frameworks. Commands: grade, position, wins, export.",
+      "version": "2.0.0",
+      "author": {
+        "name": "And/or Labs"
+      },
+      "source": "./",
+      "category": "marketing",
+      "tags": ["gtm", "positioning", "marketing", "b2b", "saas", "homepage", "copywriting", "strategy", "competitive-analysis", "pricing"],
+      "homepage": "https://github.com/eclecticv/gtm-grader"
+    }
+  ]
+}
