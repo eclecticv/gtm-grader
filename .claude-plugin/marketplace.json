@@ -11,14 +11,14 @@
   "plugins": [
     {
       "name": "gtm-grader",
-      "description": "Scores SaaS websites against 56 research-backed checks across 10 categories: 47 optimization rules from peer-reviewed marketing science (brand messaging, page design, pricing, trials, freemium, churn, affiliates, referrals) plus 9 positioning checks from Dunford and Fletch PMM frameworks. Commands: grade, position, wins, export.",
-      "version": "2.0.0",
+      "description": "Scores SaaS websites against 77 research-backed checks across 13 categories: 47 optimization rules from peer-reviewed marketing science, 9 positioning checks from Dunford and Fletch PMM, and 21 search discoverability checks (technical SEO, E-E-A-T, content depth) with competitive landscape analysis and content pillar recommendations. Commands: grade, position, search, wins, export.",
+      "version": "2.1.0",
       "author": {
         "name": "And/or Labs"
       },
       "source": "./",
       "category": "marketing",
-      "tags": ["gtm", "positioning", "marketing", "b2b", "saas", "homepage", "copywriting", "strategy", "competitive-analysis", "pricing"],
+      "tags": ["gtm", "positioning", "marketing", "b2b", "saas", "homepage", "copywriting", "strategy", "competitive-analysis", "pricing", "seo", "content-strategy"],
       "homepage": "https://github.com/eclecticv/gtm-grader"
     }
   ]
